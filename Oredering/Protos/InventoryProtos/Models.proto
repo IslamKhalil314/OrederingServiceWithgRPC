@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "Ordering.Inventory.Protos";
+
+message CheckReq {
+	repeated Item items = 1;
+}
+
+message CheckRes {
+	Status status = 1;
+	string message = 2;
+}
+
+enum Status {
+	FAIL = 0;
+	SUCCESS = 1;
+}
+
+message Item {
+	int32 itemId = 1;
+	int32 quantity = 2;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option csharp_namespace = "Ordering.PaymentService.Protos";
+
+import "Protos/PaymentProtos/Models.proto";
+service ChargingService {
+	rpc Charge (PaymentRequest) returns (PaymentResponse);
+}
